@@ -1,0 +1,17 @@
+{
+  "name": "gendocx",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "easy-template-x": "^6.2.1",
+    "echarts": "^5.6.0",
+    "marked": "^16.0.0"
+  }
+}

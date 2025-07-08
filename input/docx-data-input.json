@@ -1,0 +1,6 @@
+{
+  "posts": [
+    { "author": "Alon Bar", "text": "Very important\ntext here!" },
+    { "author": "Alon Bar", "text": "Forgot to mention that..." }
+  ]
+}
