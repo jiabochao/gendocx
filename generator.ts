@@ -2,6 +2,7 @@ import * as fs from "fs";
 import * as echarts from "echarts";
 import { TemplateHandler } from "easy-template-x";
 import { marked } from "marked";
+import markdownDocx, { Packer } from "markdown-docx";
 
 export const genDocx = async (opts: any) => {
   const templateFile = fs.readFileSync("posts.docx");
@@ -24,6 +25,20 @@ export const genDocx = async (opts: any) => {
   const outputFile = opts.output || "posts-output.docx";
   fs.writeFileSync(outputFile, doc);
   console.log(`Document generated: ${outputFile}`);
+};
+
+export const genMarkdownDocx = async (opts: any) => {
+  // Read markdown content
+  const markdown = fs.readFileSync("input.md", "utf-8");
+
+  // Convert to docx
+  const doc = await markdownDocx(markdown);
+
+  // Save to file
+  const buffer = await Packer.toBuffer(doc);
+  fs.writeFileSync("output.docx", buffer);
+
+  console.log("Conversion completed successfully!");
 };
 
 export const genSvg = (opts: any) => {
