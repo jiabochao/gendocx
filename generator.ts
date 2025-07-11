@@ -1,50 +1,86 @@
 import * as fs from "fs";
 import * as echarts from "echarts";
-import { TemplateHandler } from "easy-template-x";
 import { marked } from "marked";
 import markdownDocx, { Packer } from "markdown-docx";
+import template from "./input/report-template.txt" with { type: "text" };
+import { $ } from "bun";
+
+const reportBinPath = "/wads/report/bin";
 
 export const genDocx = async (opts: any) => {
-  const templateFile = fs.readFileSync("posts.docx");
+  const configs: ChartConfig[] = JSON.parse(
+    fs.readFileSync(opts.data, "utf-8")
+  );
 
-  let data = {
-    posts: [
-      { author: "Alon Bar", text: "Very important\ntext here!" },
-      { author: "Alon Bar", text: "Forgot to mention that..." },
-    ],
-  };
+  // 取opts.input文件所在目录
+  const inputDir = opts.input.replace(/[^/]+$/, "");
+  const svgDir = inputDir + "/svg/";
 
-  // 如果指定了数据文件，读取JSON数据
-  if (opts.data) {
-    data = JSON.parse(fs.readFileSync(opts.data, "utf-8"));
+  // 生成图表SVG
+  genSvg(svgDir, configs);
+
+  // 将图表SVG转换为PNG
+  await $`${reportBinPath}/phantomjs ${reportBinPath}/batch_rasterize.js ${svgDir} png`;
+
+  let markdown = fs.readFileSync(opts.input, "utf-8");
+
+  for (const config of configs) {
+    // convert png file to base64 image url
+    const pngFile = `${svgDir}${config.id}.png`;
+    const pngData = fs.readFileSync(pngFile);
+    const base64Image = `data:image/png;base64,${pngData.toString("base64")}`;
+    markdown = markdown.replace(`(${config.id})`, `(${base64Image})`);
   }
-
-  const handler = new TemplateHandler();
-  const doc = await handler.process(templateFile, data);
-
-  const outputFile = opts.output || "posts-output.docx";
-  fs.writeFileSync(outputFile, doc);
-  console.log(`Document generated: ${outputFile}`);
-};
-
-export const genMarkdownDocx = async (opts: any) => {
-  // Read markdown content
-  const markdown = fs.readFileSync("input.md", "utf-8");
 
   // Convert to docx
   const doc = await markdownDocx(markdown);
 
   // Save to file
   const buffer = await Packer.toBuffer(doc);
-  fs.writeFileSync("output.docx", buffer);
+  fs.writeFileSync(opts.output, buffer);
 
   console.log("Conversion completed successfully!");
 };
 
-export const genSvg = (opts: any) => {
+export const genPdf = async (opts: any) => {
+
   const configs: ChartConfig[] = JSON.parse(
     fs.readFileSync(opts.data, "utf-8")
   );
+
+  // 取opts.input文件所在目录
+  const inputDir = opts.input.replace(/[^/]+$/, "");
+  const svgDir = inputDir + "/svg/";
+
+  // 生成图表SVG
+  genSvg(svgDir, configs);
+
+  // 将图表SVG转换为PNG
+  await $`${reportBinPath}/phantomjs ${reportBinPath}/batch_rasterize.js ${svgDir} png`;
+
+  let markdown = fs.readFileSync(opts.input, "utf-8");
+
+  for (const config of configs) {
+    // convert png file to base64 image url
+    const pngFile = `${svgDir}${config.id}.png`;
+    const pngData = fs.readFileSync(pngFile);
+    const base64Image = `data:image/png;base64,${pngData.toString("base64")}`;
+    markdown = markdown.replace(`(${config.id})`, `(${base64Image})`);
+  }
+  
+  const html = await genHtml(markdown);
+
+  fs.writeFileSync(`${inputDir}/temp.html`, html, "utf-8");
+
+  await $`${reportBinPath}/phantomjs ${reportBinPath}/batch_rasterize.js ${inputDir} pdf`;
+
+  // rename ${inputDir}/temp.pdf to opts.output
+  fs.renameSync(`${inputDir}/temp.pdf`, opts.output);
+
+  console.log(`PDF generated: ${opts.output}`);
+};
+
+const genSvg = (output: string, configs: ChartConfig[]) => {
 
   if (!configs || configs.length === 0) {
     console.error("No chart configurations found in the data file.");
@@ -62,7 +98,7 @@ export const genSvg = (opts: any) => {
       chart.setOption(config.option);
       const svgStr = chart.renderToSVGString({useViewBox: true});
 
-      const outputFile = opts.output + config.id + ".svg";
+      const outputFile = output + config.id + ".svg";
       fs.writeFileSync(outputFile, svgStr, "utf-8");
       console.log(`SVG generated: ${outputFile}`);
 
@@ -71,16 +107,13 @@ export const genSvg = (opts: any) => {
   }
 };
 
-export const genHtml = async (opts: any) => {
-  const markdown = fs.readFileSync(opts.input, "utf-8");
+const genHtml = async (markdown: string) => {
   const content = await marked.parse(markdown);
-
-  const template = fs.readFileSync(opts.template, "utf-8");
   const html = template.replace("{{content}}", content);
-
-  fs.writeFileSync(opts.output, html, "utf-8");
-  console.log(`HTML generated: ${opts.output}`);
+  return html;
 };
+
+
 
 type ChartConfig = {
   id: string;
