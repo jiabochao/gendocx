@@ -12,10 +12,8 @@ program
 program
   .command("svg")
   .description("Generate SVG chart from JSON data")
-  .option("-o, --output <file>", "output file name", "chart.svg")
+  .option("-o, --output <path>", "output path", "./temp/")
   .option("-d, --data <file>", "input data JSON file")
-  .option("--width <width>", "chart width", "800")
-  .option("--height <height>", "chart height", "600")
   .action((options) => {
     genSvg(options);
   });

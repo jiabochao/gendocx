@@ -1,0 +1,1163 @@
+[
+  {
+    "id": "placeholder_attack_pie_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击数量",
+          "type": "pie",
+          "data": [
+            {
+              "name": "漏洞日志",
+              "value": 371
+            },
+            {
+              "name": "扫描日志",
+              "value": 346
+            },
+            {
+              "name": "Web日志",
+              "value": 45974
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "攻击行为占比"
+      },
+      "toolbox": {},
+      "tooltip": {}
+    }
+  },
+  {
+    "id": "placeholder_domain_pie_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击数量",
+          "type": "pie",
+          "data": [
+            {
+              "name": "内网",
+              "value": 371
+            },
+            {
+              "name": "外网",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "域内域外攻击占比"
+      },
+      "toolbox": {},
+      "tooltip": {}
+    }
+  },
+  {
+    "id": "placeholder_trend_line_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "line",
+          "data": [
+            {
+              "value": 306
+            },
+            {
+              "value": 65
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "攻击趋势图"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "2025-06-17",
+            "2025-06-18"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_attacker_top5_bar_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "bar",
+          "data": [
+            {
+              "value": 306
+            },
+            {
+              "value": 55
+            },
+            {
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "攻击者TOP5"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "192.168.1.22",
+            "192.168.1.177",
+            "192.168.1.178"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_vul_level_pie_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "pie",
+          "type": "pie",
+          "data": [
+            {
+              "name": "高危",
+              "value": 765
+            },
+            {
+              "name": "低危",
+              "value": 254
+            },
+            {
+              "name": "超危",
+              "value": 58
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "漏洞等级占比"
+      },
+      "toolbox": {},
+      "tooltip": {}
+    }
+  },
+  {
+    "id": "placeholder_vul_type_top5_bar_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "bar",
+          "data": [
+            {
+              "value": 254
+            },
+            {
+              "value": 254
+            },
+            {
+              "value": 254
+            },
+            {
+              "value": 254
+            },
+            {
+              "value": 42
+            },
+            {
+              "value": 6
+            },
+            {
+              "value": 6
+            },
+            {
+              "value": 4
+            },
+            {
+              "value": 3
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "漏洞类型TOP5"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "溢出漏洞",
+            "拒绝服务",
+            "信息泄露",
+            "缓冲区溢出",
+            "代码执行",
+            "文件上传",
+            "访问控制",
+            "文件读取",
+            "命令执行"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_vul_trend_line_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "line",
+          "data": [
+            {
+              "value": 1077
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "漏洞趋势图"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "2025-07-07"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_vul_host_top5_bar_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "bar",
+          "data": [
+            {
+              "value": 18
+            },
+            {
+              "value": 18
+            },
+            {
+              "value": 9
+            },
+            {
+              "value": 9
+            },
+            {
+              "value": 3
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "漏洞主机TOP5"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "117.146.73.133",
+            "117.146.73.156",
+            "10.31.0.0/16",
+            "10.2.0.0/16",
+            "192.168.1.1"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_vul_exploit_top5_bar_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "bar",
+          "data": [
+            {
+              "value": 254
+            },
+            {
+              "value": 254
+            },
+            {
+              "value": 254
+            },
+            {
+              "value": 254
+            },
+            {
+              "value": 6
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "漏洞利用TOP5"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "CVE-1999-0182",
+            "CVE-1999-0229",
+            "CVE-2000-0114",
+            "CVE-2001-0500",
+            "CVE-2015-4852"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_host_vul_distribution_bar_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "漏洞数量",
+          "type": "bar",
+          "data": []
+        },
+        {
+          "name": "弱口令数量",
+          "type": "bar",
+          "data": []
+        },
+        {
+          "name": "总数量",
+          "type": "bar",
+          "data": []
+        }
+      ],
+      "title": {
+        "text": "主机漏洞分布图"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": null
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_host_trend_line_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "line",
+          "data": [
+            {
+              "value": 1
+            },
+            {
+              "value": 1
+            },
+            {
+              "value": 1077
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "主机漏洞趋势图"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "2025-04-08T00:00:00+08:00",
+            "2025-06-30T00:00:00+08:00",
+            "2025-07-07T00:00:00+08:00"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_host_vul_top5_bar_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "bar",
+          "data": [
+            {
+              "value": 9
+            },
+            {
+              "value": 9
+            },
+            {
+              "value": 9
+            },
+            {
+              "value": 9
+            },
+            {
+              "value": 3
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "主机漏洞TOP5"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "10.2.0.0/16",
+            "117.146.73.133",
+            "117.146.73.156",
+            "10.31.0.0/16",
+            "192.168.1.1"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_host_attack_top5_bar_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "bar",
+          "data": [
+            {
+              "value": 371
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "主机攻击TOP5"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "192.168.1.201"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_web_attack_type_pie_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "pie",
+          "type": "pie",
+          "data": [
+            {
+              "name": "漏洞利用",
+              "value": 35378
+            },
+            {
+              "name": "扫描",
+              "value": 3144
+            },
+            {
+              "name": "IOT攻击",
+              "value": 1536
+            },
+            {
+              "name": "目录遍历",
+              "value": 1104
+            },
+            {
+              "name": "文件读取",
+              "value": 994
+            },
+            {
+              "name": "黑客工具",
+              "value": 987
+            },
+            {
+              "name": "代码执行",
+              "value": 752
+            },
+            {
+              "name": "SQL注入",
+              "value": 552
+            },
+            {
+              "name": "访问控制",
+              "value": 508
+            },
+            {
+              "name": "文件上传",
+              "value": 412
+            },
+            {
+              "name": "命令执行",
+              "value": 299
+            },
+            {
+              "name": "XML外部实体注入",
+              "value": 138
+            },
+            {
+              "name": "webshell上传",
+              "value": 50
+            },
+            {
+              "name": "webshell连接",
+              "value": 46
+            },
+            {
+              "name": "跨站脚本",
+              "value": 38
+            },
+            {
+              "name": "僵尸网络",
+              "value": 21
+            },
+            {
+              "name": "信息泄露",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "Web攻击类型占比"
+      },
+      "toolbox": {},
+      "tooltip": {}
+    }
+  },
+  {
+    "id": "placeholder_web_domain_pie_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击数量",
+          "type": "pie",
+          "data": [
+            {
+              "name": "内网",
+              "value": 45893
+            },
+            {
+              "name": "外网",
+              "value": 81
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "Web域内域外攻击占比"
+      },
+      "toolbox": {},
+      "tooltip": {}
+    }
+  },
+  {
+    "id": "placeholder_web_trend_line_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "line",
+          "data": [
+            {
+              "value": 2
+            },
+            {
+              "value": 3
+            },
+            {
+              "value": 9
+            },
+            {
+              "value": 5
+            },
+            {
+              "value": 3
+            },
+            {
+              "value": 14529
+            },
+            {
+              "value": 32
+            },
+            {
+              "value": 28891
+            },
+            {
+              "value": 2500
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "Web攻击趋势图"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "2025-05-12",
+            "2025-06-03",
+            "2025-06-04",
+            "2025-06-05",
+            "2025-06-16",
+            "2025-06-17",
+            "2025-06-18",
+            "2025-06-24",
+            "2025-06-25"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_web_attacker_top5_bar_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "bar",
+          "data": [
+            {
+              "value": 43028
+            },
+            {
+              "value": 2316
+            },
+            {
+              "value": 402
+            },
+            {
+              "value": 64
+            },
+            {
+              "value": 45
+            },
+            {
+              "value": 31
+            },
+            {
+              "value": 21
+            },
+            {
+              "value": 21
+            },
+            {
+              "value": 19
+            },
+            {
+              "value": 13
+            },
+            {
+              "value": 6
+            },
+            {
+              "value": 5
+            },
+            {
+              "value": 1
+            },
+            {
+              "value": 1
+            },
+            {
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "Web攻击者TOP5"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "192.168.1.22",
+            "192.168.100.232",
+            "192.168.1.201",
+            "10.224.51.19",
+            "192.168.1.177",
+            "45.43.38.254",
+            "219.137.142.147",
+            "137.116.133.111",
+            "192.168.1.151",
+            "192.168.21.142",
+            "10.104.4.129",
+            "122.168.11.11",
+            "220:a8c0:b101:0:0:0:0:100",
+            "2002:c0a8:1b1:0:0:0:0:1",
+            "138.68.73.41"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_web_target_port_top5_bar_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "bar",
+          "data": [
+            {
+              "value": 6261
+            },
+            {
+              "value": 6194
+            },
+            {
+              "value": 4917
+            },
+            {
+              "value": 4360
+            },
+            {
+              "value": 3292
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "Web目标端口TOP5"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "9001",
+            "8080",
+            "10240",
+            "80",
+            "8983"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "placeholder_web_target_top5_bar_chart.png",
+    "renderer": "svg",
+    "width": 1024,
+    "height": 768,
+    "option": {
+      "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+      ],
+      "legend": {},
+      "series": [
+        {
+          "name": "攻击次数",
+          "type": "bar",
+          "data": [
+            {
+              "value": 32360
+            },
+            {
+              "value": 2247
+            },
+            {
+              "value": 1478
+            },
+            {
+              "value": 843
+            },
+            {
+              "value": 765
+            },
+            {
+              "value": 746
+            },
+            {
+              "value": 745
+            },
+            {
+              "value": 731
+            },
+            {
+              "value": 726
+            },
+            {
+              "value": 725
+            }
+          ]
+        }
+      ],
+      "title": {
+        "text": "Web目标TOP5"
+      },
+      "toolbox": {},
+      "tooltip": {},
+      "xAxis": [
+        {
+          "data": [
+            "192.168.1.201",
+            "192.168.1.194",
+            "192.168.1.157",
+            "192.168.1.23",
+            "192.168.1.215",
+            "192.168.1.88",
+            "192.168.1.98",
+            "192.168.1.202",
+            "192.168.1.81",
+            "192.168.1.99"
+          ]
+        }
+      ],
+      "yAxis": [
+        {}
+      ]
+    }
+  }
+]

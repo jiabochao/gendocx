@@ -45,3 +45,6 @@ bun build --compile --minify --sourcemap --target=bun-darwin-arm64 ./index.ts --
 ```
 
 This project was created using `bun init` in bun v1.1.10. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+
+
+./phantomjs batch_rasterize.js /Users/bochao/Work/projects/gendocx/temp png

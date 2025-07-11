@@ -42,40 +42,33 @@ export const genMarkdownDocx = async (opts: any) => {
 };
 
 export const genSvg = (opts: any) => {
-  const chart = echarts.init(null, null, {
-    renderer: "svg",
-    ssr: true,
-    width: parseInt(opts.width),
-    height: parseInt(opts.height),
-  });
+  const configs: ChartConfig[] = JSON.parse(
+    fs.readFileSync(opts.data, "utf-8")
+  );
 
-  // 如果指定了数据文件，读取JSON配置
-  let chartOption = {
-    title: { text: "ECharts 入门示例" },
-    tooltip: {},
-    xAxis: { data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"] },
-    yAxis: {},
-    series: [
-      {
-        name: "销量",
-        type: "bar",
-        data: [5, 20, 36, 10, 10, 20],
-      },
-    ],
-  };
-
-  if (opts.data) {
-    chartOption = JSON.parse(fs.readFileSync(opts.data, "utf-8"));
+  if (!configs || configs.length === 0) {
+    console.error("No chart configurations found in the data file.");
+    return;
   }
 
-  chart.setOption(chartOption);
-  const svgStr = chart.renderToSVGString();
+  for (const config of configs) {
+    const chart = echarts.init(null, null, {
+        renderer: config.renderer,
+        ssr: true,
+        width: config.width,
+        height: config.height,
+      });
 
-  const outputFile = opts.output || "bar.svg";
-  fs.writeFileSync(outputFile, svgStr, "utf-8");
-  console.log(`SVG generated: ${outputFile}`);
+      chart.setOption(config.option);
+      const svgStr = chart.renderToSVGString({useViewBox: true});
 
-  chart.dispose();
+      const outputFile = opts.output + config.id + ".svg";
+      fs.writeFileSync(outputFile, svgStr, "utf-8");
+      console.log(`SVG generated: ${outputFile}`);
+
+      chart.dispose();
+    
+  }
 };
 
 export const genHtml = async (opts: any) => {
@@ -87,4 +80,12 @@ export const genHtml = async (opts: any) => {
 
   fs.writeFileSync(opts.output, html, "utf-8");
   console.log(`HTML generated: ${opts.output}`);
+};
+
+type ChartConfig = {
+  id: string;
+  renderer: "canvas" | "svg";
+  width: number;
+  height: number;
+  option: any;
 };
